@@ -1,0 +1,39 @@
+@import '~bulma/sass/utilities/initial-variables';
+$blue: #0076a9;
+$primary: $blue;
+$family-sans-serif: Gudea, sans-serif;
+@import "~bulma/bulma";
+
+.is-twitter {
+    fill: #1da1f2;
+}
+
+.is-facebook {
+    fill: #3b5998;
+}
+
+.is-youtube {
+    fill: #cd201f;
+}
+
+.svg-icon {
+    height: 2em;
+    width: 2em;
+}
+
+.svg-icon-small {
+    height: 1em;
+    width: 1em;
+}
+
+.bg-img {
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    a {
+        color: #ffffff;
+    }
+
+    .subtitle {
+        color: #ffffff;
+    }
+}

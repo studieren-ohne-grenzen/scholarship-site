@@ -207,7 +207,7 @@ class ApplicationController extends Controller
         $applicant->project_partners = $request->session()->get('project_partners');
 
         $applicant->save();
-
+        $request->session()->flush();
         return view('submitted');
     }
 }

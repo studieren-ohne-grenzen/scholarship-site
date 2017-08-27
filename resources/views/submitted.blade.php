@@ -5,7 +5,7 @@
 @section('content')
   <section class="section">
     <div class="container">
-      <p>Thank you for submitting your application. After the registration closes, we will look at each application and get back to you later.</p>
+      <p>Thank you for submitting your application. After the registration closes, we will look at each application and get back to you.</p>
     </div>
   </section>
 @endsection

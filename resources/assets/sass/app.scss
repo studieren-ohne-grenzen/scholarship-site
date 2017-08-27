@@ -27,7 +27,7 @@ $family-sans-serif: Gudea, sans-serif;
 }
 
 .bg-img {
-    background-image: url('/img/bg.jpg');
+    background: url('/img/bg.jpg') no-repeat center center;
     background-size: cover;
     a {
         color: #ffffff;

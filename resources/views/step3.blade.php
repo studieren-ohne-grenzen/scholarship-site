@@ -67,7 +67,7 @@
         <div class="field">
           <label class="label">Any additional information you would like to add?</label>
           <div class="control">
-            <textarea class="textarea" placeholder="" name="additional_information"></textarea>
+            <textarea class="textarea" placeholder="" name="additional_information">{{ Session::get('additional_information', '') }}</textarea>
           </div>
         </div>
 

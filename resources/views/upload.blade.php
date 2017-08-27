@@ -10,15 +10,6 @@
       <a class="button is-primary" href="document.pdf">Click here to download the PDF</a><br><br>
       <h3 class="title is-3">Step 2: Upload</h3>
       <p>Now, please enter your name and upload a copy of your filled out document.</p><br>
-      @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
       <form method="POST" action="/uploaded" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="field">

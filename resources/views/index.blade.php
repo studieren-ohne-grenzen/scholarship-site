@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'SOG Scholarships')
-@section('subtitle', 'Education is the most powerful weapon which you can use to change the world.')
+@section('subtitle', '“Education is the most powerful weapon which you can use to change the world.” - Nelson Mandela')
 
 @section('content')
   <section class="section">
@@ -13,7 +13,7 @@
       <p>Please describe shortly your idea for a personal project which would help to develop your region or society. If you plan to carry out the project in cooperation with a partner (whether it is another scholarship holder, fellow student or NGO) please state their name and their specific roles.</p>
 
       <h3>Application</h3>
-      <p>Do you think you are a good candidate for a scholarship? We are happy to receive your application.</p><br>
+      <p>Do you think you are a suitable candidate for a scholarship? We are happy to receive your application.</p><br>
       <div class="has-text-centered"><a class="button is-primary" href="/apply">Apply now</a></div>
     </div>
   </section>

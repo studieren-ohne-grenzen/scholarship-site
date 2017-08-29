@@ -37,3 +37,14 @@ $family-sans-serif: Gudea, sans-serif;
         color: #ffffff;
     }
 }
+
+a.nav-item:not(.button) {
+    color: rgba(255, 255, 255, 0.7);
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+a.nav-item.is-active:not(.button) {
+    color: #ffffff;
+}

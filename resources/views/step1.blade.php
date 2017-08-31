@@ -39,10 +39,6 @@
               <input type="radio" name="gender" value="female" @if ( Session::get('gender', 'asd') === 'female') checked @endif required>
               Female
             </label>
-            <label class="radio">
-              <input type="radio" name="gender" value="other" @if ( Session::get('gender', 'asd') === 'other') checked @endif required>
-              Other
-            </label>
           </div>
         </div>
 

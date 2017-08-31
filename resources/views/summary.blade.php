@@ -10,7 +10,7 @@
         <p><b>First name:</b> {{ Session::get('first_name', '') }}<br>
           <b>Family name:</b> {{ Session::get('family_name', '') }}<br>
           <b>Nationality:</b> {{ Session::get('nationality', '') }}<br>
-          <b>Gender:</b> {{ Session::get('gender', '') }}<br>
+          <b>Gender:</b> @if ( Session::get('gender', 'asd') === 'male') Male @else Female @endif<br>
           <b>Current address:</b> {{ Session::get('current_address', '') }}<br>
           <b>Civil status:</b> {{ Session::get('civil_status', '') }}<br>
           <b>Date of birth:</b> {{ Session::get('date_of_birth', '') }}<br>

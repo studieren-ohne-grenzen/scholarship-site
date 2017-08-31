@@ -19,7 +19,7 @@ class CreateApplicantsTable extends Migration
             $table->string('first_name');
             $table->string('family_name');
             $table->string('nationality');
-            $table->enum('gender', ['male', 'female', 'other']);
+            $table->enum('gender', ['male', 'female']);
             $table->string('current_address');
             $table->string('civil_status');
             $table->date('date_of_birth');

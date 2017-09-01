@@ -14,7 +14,7 @@
     <section class="hero is-primary">
     @endif
       <div class="hero-head">
-        <header class="nav nav-colors" id="navbar">
+        <header class="nav nav-colors is-primary" id="navbar">
           <div class="container">
             <div class="nav-left">
             </div>

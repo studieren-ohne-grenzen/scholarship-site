@@ -14,28 +14,32 @@
     <section class="hero is-primary">
     @endif
       <div class="hero-head">
-        <header class="nav nav-colors is-primary" id="navbar">
-          <div class="container">
-            <div class="nav-left">
+        <nav class="navbar is-transparent">
+          <div class="navbar-brand">
+            <div class="navbar-burger burger" id="navbar-burger">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <span id="navbar-burger" class="nav-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-            <div class="nav-right nav-menu" id="nav-menu">
-              <a class="nav-item @if(Request::is('/')) is-active @endif" href="/">
+          </div>
+
+          <div id="nav-menu" class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+
+            <div class="navbar-end">
+              <a class="navbar-item @if(Request::is('/')) is-active @endif" href="/">
                 Home
               </a>
-              <a class="nav-item @if(Request::is('about')) is-active @endif" href="/about">
+              <a class="navbar-item @if(Request::is('about')) is-active @endif" href="/about">
                 About SOG
               </a>
-              <a class="nav-item @if(Request::is('apply')) is-active @endif" href="/apply">
+              <a class="navbar-item @if(Request::is('apply')) is-active @endif" href="/apply">
                 Apply now
               </a>
             </div>
           </div>
-        </header>
+        </nav>
       </div>
       <div class="hero-body">
         <div class="container">

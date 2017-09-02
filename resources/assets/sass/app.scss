@@ -2,6 +2,7 @@
 $blue: #0076a9;
 $primary: $blue;
 $family-sans-serif: Gudea, sans-serif;
+$navbar-background-color: transparent;
 @import "~bulma/bulma";
 
 .is-twitter {
@@ -38,13 +39,27 @@ $family-sans-serif: Gudea, sans-serif;
     }
 }
 
-a.nav-item:not(.button) {
-    color: rgba(255, 255, 255, 0.7);
-    &:hover {
-        color: #ffffff;
-    }
+// Fix navbar colors
+.hero.is-primary a.navbar-item.is-active {
+    color: #0a0a0a;
 }
 
-a.nav-item.is-active:not(.button) {
-    color: #ffffff;
+.hero.is-primary a.navbar-item:hover {
+    color: #0a0a0a;
+}
+
+// Fix navbar burger colors
+.navbar-burger.is-active span,
+.navbar-burger span {
+    background-color: #ffffff;
+}
+
+//Fix navbar burger hover
+.navbar-burger.is-active,
+.navbar-burger {
+    &:hover {
+        span {
+            background-color: #000000;
+        }
+    }
 }

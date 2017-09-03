@@ -6,6 +6,7 @@ First name: {{ $applicant->first_name }}
 Family name: {{ $applicant->family_name }}
 Nationality: {{ $applicant->nationality }}
 Gender: @if($applicant->gender === 'male') Male @else Female @endif
+
 Current address: {{ $applicant->current_address }}
 Civil status: {{ $applicant->civil_status }}
 Date of Birth: {{ $applicant->date_of_birth }}
@@ -44,6 +45,7 @@ Has your family been affected by the conflict? Did you have any material loss du
 Would you be able to afford your studies without the support of SOG?
 @if ($applicant->support_needed === '1') Yes @else No @endif
 
+
 Any additional information you would like to add?
 {{ $applicant->additional_information }}
 
@@ -53,11 +55,13 @@ Any additional information you would like to add?
 Have you already been enrolled at a university?
 @if($applicant->enrolled === '1') Yes @else No @endif
 
+
 If yes: In which field?
 {{ $applicant->major }}
 
 If yes: Are you still studying?
 @if($applicant->still_studying === '1') Yes @else No @endif
+
 
 If no: What were your reasons for interrupting your studies?
 {{ $applicant->dropping_out_reasons }}
@@ -70,6 +74,7 @@ What languages do you speak? Please indicate level (spoken/written/mother tongue
 
 Do you have the possibility to live with your family during your studies?
 @if($applicant->live_with_family === '1') Yes @else No @endif
+
 
 5. Engagement & Motivation
 --------------------------

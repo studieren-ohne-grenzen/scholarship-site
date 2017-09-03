@@ -16,6 +16,7 @@ use App\Http\Requests\SummaryData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\UploadSignup;
+use App\Mail\FormSignup;
 
 class ApplicationController extends Controller
 {

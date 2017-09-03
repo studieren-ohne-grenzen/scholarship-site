@@ -10,36 +10,51 @@
         <div class="field">
           <label class="label">Name, age and profession of mother</label>
           <div class="control">
-            <input type="text" class="input" name="mother" placeholder="" value="{{ Session::get('mother', '') }}" required>
+            <input type="text" class="input @if($errors->has('mother')) is-danger @endif" name="mother" placeholder="" value="{{ old('mother', Session::get('mother')) }}" required>
           </div>
+          @foreach($errors->get('mother') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
           <label class="label">Name, age and profession of father</label>
           <div class="control">
-            <input type="text" class="input" name="father" placeholder="" value="{{ Session::get('father', '') }}" required>
+            <input type="text" class="input @if($errors->has('father')) is-danger @endif" name="father" placeholder="" value="{{ old('father', Session::get('father')) }}" required>
           </div>
+          @foreach($errors->get('father') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
           <label class="label">If married: name, age and profession of husband / wife</label>
           <div class="control">
-            <input type="text" class="input" name="spouse" placeholder="" value="{{ Session::get('spouse', '') }}">
+            <input type="text" class="input @if($errors->has('spouse')) is-danger @endif" name="spouse" placeholder="" value="{{ old('spouse', Session::get('spouse')) }}">
           </div>
+          @foreach($errors->get('spouse') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
           <label class="label">If applicable: age of child / children</label>
           <div class="control">
-            <textarea class="textarea" placeholder="" name="children">{{ Session::get('children', '') }}</textarea>
+            <textarea class="textarea @if($errors->has('children')) is-danger @endif" placeholder="" name="children">{{ old('children', Session::get('children')) }}</textarea>
           </div>
+          @foreach($errors->get('children') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
           <label class="label">Age and profession of sibling(s)</label>
           <div class="control">
-            <textarea class="textarea" placeholder="" name="siblings">{{ Session::get('siblings', '') }}</textarea>
+            <textarea class="textarea @if($errors->has('siblings')) is-danger @endif" placeholder="" name="siblings">{{ old('siblings', Session::get('siblings')) }}</textarea>
           </div>
+          @foreach($errors->get('siblings') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field is-grouped is-grouped-centered">

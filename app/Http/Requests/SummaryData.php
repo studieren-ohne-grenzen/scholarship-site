@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UploadData extends FormRequest
+class SummaryData extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -32,9 +32,6 @@ class UploadData extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required',
-            'family_name' => 'required',
-            'application_pdf' => 'required|file',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

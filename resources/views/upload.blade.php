@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title', 'SOG Scholarships')
 @section('subtitle', 'Application - Upload')
+@section('recaptcha')
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+@endsection
 
 @section('content')
   <section class="section">
@@ -15,15 +18,21 @@
         <div class="field">
           <label class="label">First name</label>
           <div class="control">
-            <input type="text" class="input" name="first_name" placeholder="" value="{{ Session::get('first_name', '') }}" required>
+            <input type="text" class="input" name="first_name" placeholder="" value="{{ old('first_name') }}" required>
           </div>
+          @foreach($errors->get('first_name') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
           <label class="label">Family name</label>
           <div class="control">
-            <input type="text" class="input" name="family_name" placeholder="" value="{{ Session::get('family_name', '') }}" required>
+            <input type="text" class="input" name="family_name" placeholder="" value="{{ old('family_name') }}" required>
           </div>
+          @foreach($errors->get('family_name') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">
@@ -41,6 +50,18 @@
               <span class="file-name is-hidden" id="file-upload-name"></span>
             </label>
           </div>
+          @foreach($errors->get('application_pdf') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
+        </div>
+
+        <div class="field">
+          <div class="control">
+              <div class="g-recaptcha" data-sitekey="6LduLC8UAAAAAPlcIF86f_NEyW6BNHBoUmXp_7-3"></div>
+          </div>
+          @foreach($errors->get('g-recaptcha-response') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
         </div>
 
         <div class="field">

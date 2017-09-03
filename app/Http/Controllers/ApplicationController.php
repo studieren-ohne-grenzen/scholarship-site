@@ -12,6 +12,7 @@ use App\Http\Requests\Step4Data;
 use App\Http\Requests\Step5Data;
 use App\Http\Requests\Step6Data;
 use App\Http\Requests\UploadData;
+use App\Http\Requests\SummaryData;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -156,7 +157,7 @@ class ApplicationController extends Controller
         return view('submitted');
     }
     
-    public function create(Request $request)
+    public function create(SummaryData $request)
     {
         // TODO: Validation
         $applicant = new Applicant;

@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title', 'SOG Scholarship')
 @section('subtitle', 'Application - Summary')
+@section('recaptcha')
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+@endsection
 
 @section('content')
   <section class="section">
@@ -91,6 +94,15 @@
       
       <form method="POST" action="/submitted">
         {{ csrf_field() }}
+
+        <div class="field">
+          <div class="control">
+              <div class="g-recaptcha" data-sitekey="6LduLC8UAAAAAPlcIF86f_NEyW6BNHBoUmXp_7-3"></div>
+          </div>
+          @foreach($errors->get('g-recaptcha-response') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
+        </div>
 
         <div class="field is-grouped is-grouped-centered">
           <p class="control">

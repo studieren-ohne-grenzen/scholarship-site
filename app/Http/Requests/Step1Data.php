@@ -16,6 +16,13 @@ class Step1Data extends FormRequest
         return true;
     }
 
+    public function messages()
+    {
+        return [
+            'gender.in' => 'For this application period, we will only accept female applicants.'
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -27,7 +34,7 @@ class Step1Data extends FormRequest
             'first_name' => 'required',
             'family_name' => 'required',
             'nationality' => 'required',
-            'gender' => 'required',
+            'gender' => 'required|in:female',
             'current_address' => 'required',
             'civil_status' => 'required',
             'date_of_birth' => 'required|date',

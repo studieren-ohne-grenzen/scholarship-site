@@ -10,7 +10,8 @@
     <div class="container">
       <h3 class="title is-3">Step 1: Download PDF</h3>
       <p>First, download and fill out the following application document.</p><br>
-      <a class="button is-primary" href="document.pdf">Click here to download the PDF</a><br><br>
+      <p><a class="button is-primary" href="/docs/questionnaire.pdf">Download as PDF</a></p><br>
+      <p><a class="button is-primary" href="/docs/questionnaire.docx">Download as .docx</a></p><br>
       <h3 class="title is-3">Step 2: Upload</h3>
       <p>Now, please enter your name and upload a copy of your filled out document.</p><br>
       <form method="POST" action="/uploaded" enctype="multipart/form-data">

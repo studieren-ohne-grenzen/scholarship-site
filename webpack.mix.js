@@ -21,5 +21,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
     ]
   })
   .copyDirectory('resources/assets/img', 'public/img')
+  .copyDirectory('resources/assets/docs', 'public/docs')
   .version()
   .browserSync('localhost:8000')

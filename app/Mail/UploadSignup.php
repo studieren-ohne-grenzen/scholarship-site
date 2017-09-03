@@ -32,6 +32,9 @@ class UploadSignup extends Mailable
     public function build()
     {
         return $this->text('emails.upload_plain')
-                    ->attach(storage_path('app/' . $this->applicant->file_name));
+                    ->attach(storage_path('app/' . $this->applicant->file_name), [
+                        'as' => "application.pdf",
+                        'mime' => 'application/pdf'
+                    ]);
     }
 }

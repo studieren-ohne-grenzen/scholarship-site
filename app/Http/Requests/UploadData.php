@@ -35,7 +35,7 @@ class UploadData extends FormRequest
             'first_name' => 'required',
             'family_name' => 'required',
             'email' => 'required|email',
-            'application_pdf' => 'required|file',
+            'application_pdf' => 'required|file|mimes:pdf',
             'g-recaptcha-response' => 'required|recaptcha'
         ];
     }

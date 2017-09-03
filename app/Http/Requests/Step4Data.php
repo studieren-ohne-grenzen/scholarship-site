@@ -25,9 +25,9 @@ class Step4Data extends FormRequest
     {
         return [
             'enrolled' => 'required|boolean',
-            'major' => '',
-            'still_studying' => 'boolean',
-            'dropping_out_reasons' => '',
+            'major' => 'required_if:enrolled,1',
+            'still_studying' => 'required_if:enrolled,1|boolean',
+            'dropping_out_reasons' => 'required_if:still_studying,0',
             'wanted_major' => 'required',
             'languages' => 'required',
             'live_with_family' => 'required|boolean'

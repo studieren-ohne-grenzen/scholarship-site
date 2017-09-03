@@ -36,6 +36,16 @@
         </div>
 
         <div class="field">
+          <label class="label">E-Mail</label>
+          <div class="control">
+            <input type="email" class="input @if($errors->has('email')) is-danger @endif" name="email" placeholder="" value="{{ old('email') }}" required>
+          </div>
+          @foreach($errors->get('email') as $error)
+              <p class="help is-danger">{{ $error }}</p>
+          @endforeach
+        </div>
+
+        <div class="field">
           <div class="file" id="fileUpload">
             <label class="file-label">
               <input class="file-input" type="file" name="application_pdf" id="file-upload" required>

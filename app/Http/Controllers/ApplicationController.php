@@ -14,6 +14,8 @@ use App\Http\Requests\Step6Data;
 use App\Http\Requests\UploadData;
 use App\Http\Requests\SummaryData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\UploadSignup;
 
 class ApplicationController extends Controller
 {
@@ -152,8 +154,12 @@ class ApplicationController extends Controller
         $applicant = new UploadApplicant;
         $applicant->first_name = $request->input('first_name');
         $applicant->family_name = $request->input('family_name');
+        $applicant->email = $request->input('email');
         $applicant->file_name = $request->file('application_pdf')->store('applications');
         $applicant->save();
+
+        Mail::to('TO_ADDRESS')->send(new UploadSignup($applicant));
+
         return view('submitted');
     }
     
@@ -209,6 +215,9 @@ class ApplicationController extends Controller
 
         $applicant->save();
         $request->session()->flush();
+
+        Mail::to('TO_ADDRESS')->send(new FormSignup($applicant));
+
         return view('submitted');
     }
 }

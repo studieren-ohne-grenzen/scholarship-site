@@ -18,6 +18,7 @@ class CreateUploadApplicantsTable extends Migration
             $table->timestamps();
             $table->string('first_name');
             $table->string('family_name');
+            $table->string('email');
             $table->string('file_name');
         });
     }

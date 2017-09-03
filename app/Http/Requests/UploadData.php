@@ -34,6 +34,7 @@ class UploadData extends FormRequest
         return [
             'first_name' => 'required',
             'family_name' => 'required',
+            'email' => 'required|email',
             'application_pdf' => 'required|file',
             'g-recaptcha-response' => 'required|recaptcha'
         ];

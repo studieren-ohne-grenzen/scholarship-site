@@ -27,6 +27,15 @@ $navbar-background-color: transparent;
     width: 1em;
 }
 
+.sog-logo {
+    width: 125px;
+    height: 125px;
+    @include mobile {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 .bg-img {
     background: url('/img/bg.jpg') no-repeat center center;
     background-size: cover;

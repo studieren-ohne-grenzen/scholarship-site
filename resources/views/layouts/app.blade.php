@@ -50,7 +50,7 @@
         <div class="container">
           <div class="columns is">
             <div class="column is-narrow has-text-centered">
-              <img src="img/sog_logo.png" width="90" height="90">
+              <img src="img/sog_logo.png" class="sog-logo">
             </div>
             <div class="column">
               <h1 class="title is-1"><a href="/">@yield('title')</a></h1>
